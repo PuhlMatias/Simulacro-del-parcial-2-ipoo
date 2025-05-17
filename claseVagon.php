@@ -1,5 +1,5 @@
 <?php
- class Vagon {
+ abstract class Vagon {
     //Atributos
     private $anioInstalacion;
     private $largo;
@@ -52,4 +52,7 @@
         "\nAncho del vagon: " . $this->getAncho().
         "\nPeso del vagon: " . $this->getPesoVagon();
     }
+
+    //Metodo que se redefine en las clases hijas
+    abstract public function calcularPeso();
  }

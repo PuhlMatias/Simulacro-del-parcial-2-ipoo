@@ -42,4 +42,11 @@ class VagonCarga extends Vagon {
     {
         return "\nPeso maximo a transportar: " . $this->getPesoMaxTransportar()."\nCarga maxima a transportar: " . $this->getCargaTransportar();
     }
+
+    //Metodo para calcular el peso del vagon
+    public function calcularPeso() {
+        return $this->getPesoVagon() + $this->getCargaTransportar() + $this->getIndice();
+}
+
+
 }
