@@ -60,7 +60,7 @@ class VagonPasajeros extends Vagon {
         if ($cantidadNueva <= $this->getCantMaxPasajeros()) {
             $this->setCanTransportando($cantidadNueva);
 
-            $pesoNuevo = $this->getPesoVagon() + ($this->getCanTransportando()* $this->getPesoPromedioPasajeros());
+            $pesoNuevo = $this->calcularPeso();
             $this->setPesoVagon($pesoNuevo);
 
             $valorRetornar = true;

@@ -46,7 +46,21 @@ class VagonCarga extends Vagon {
     //Metodo para calcular el peso del vagon
     public function calcularPeso() {
         return $this->getPesoVagon() + $this->getCargaTransportar() + $this->getIndice();
-}
+    }
 
+    //Metodo incorporar carga vagon y actualiza variables
+    public function incorporarCargaVagon($cantCarga){
+        $valorRetornar = false;
+        $cantidadNueva = $this->getCargaTransportar() + $cantCarga;
 
+        if ($cantidadNueva <= $this->getPesoMaxTransportar()) {
+            $this->setCargaTransportar($cantidadNueva);
+
+            $pesoNuevo = $this->calcularPeso();
+            $this->setPesoVagon($pesoNuevo);
+
+            $valorRetornar = true;
+        } 
+        return $valorRetornar;
+    }
 }
