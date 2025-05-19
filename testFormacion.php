@@ -11,9 +11,9 @@ echo "====== CREACIÓN DE OBJETOS ======\n";
 $objLocomotora = new Locomotora(188000, 140);
 
 // 2. Crear 3 objetos vagones
-$objVagon1 = new VagonPasajeros(30, 25, 2015, 20, 5, 15000); // capacidad 30, 25 actuales
-$objVagon2 = new VagonCarga(2010, 25, 5, 15000, 55000, 0); // carga máxima 55000, sin carga actual
-$objVagon3 = new VagonPasajeros(50, 50, 2018, 22, 5, 15000); // lleno
+$objVagon1 = new VagonPasajeros(30, 25, 2015, 20, 5, 15000);
+$objVagon2 = new VagonCarga(2010, 25, 5, 15000, 55000, 0); 
+$objVagon3 = new VagonPasajeros(50, 50, 2018, 22, 5, 15000); 
 
 // 3. Crear formación
 $objFormacion = new Formacion($objLocomotora, 5);
