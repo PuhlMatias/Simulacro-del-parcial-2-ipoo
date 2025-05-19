@@ -1,8 +1,9 @@
 <?php
-include_once 'Locomotora.php';
-include_once 'Formacion.php';
-include_once 'VagonPasajeros.php';
-include_once 'VagonCarga.php';
+include_once 'claseLocomotora.php';
+include_once 'claseFormacion.php';
+include_once 'claseVagonPasajeros.php';
+include_once 'claseVagonCarga.php';
+include_once 'claseVagon.php';
 
 echo "====== CREACIÓN DE OBJETOS ======\n";
 
@@ -15,7 +16,7 @@ $objVagon2 = new VagonCarga(2010, 25, 5, 15000, 55000, 0); // carga máxima 5500
 $objVagon3 = new VagonPasajeros(50, 50, 2018, 22, 5, 15000); // lleno
 
 // 3. Crear formación
-$objFormacion = new Formacion($objLocomotora, 5); // capacidad para 5 vagones
+$objFormacion = new Formacion($objLocomotora, 5);
 
 // Incorporar vagones
 $objFormacion->incorporarVagonFormacion($objVagon1);
