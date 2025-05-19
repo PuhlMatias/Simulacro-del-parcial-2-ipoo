@@ -47,7 +47,7 @@ class VagonPasajeros extends Vagon {
     }
 
     //Metodo para calcular el peso del vagon
-    public function calcularPeso() {
+    public function calcularPesoVagon() {
         return $this->getPesoVagon() + ($this->getCanTransportando() * $this->getPesoPromedioPasajeros());
     }
 
@@ -60,7 +60,7 @@ class VagonPasajeros extends Vagon {
         if ($cantidadNueva <= $this->getCantMaxPasajeros()) {
             $this->setCanTransportando($cantidadNueva);
 
-            $pesoNuevo = $this->calcularPeso();
+            $pesoNuevo = $this->calcularPesoVagon();
             $this->setPesoVagon($pesoNuevo);
 
             $valorRetornar = true;

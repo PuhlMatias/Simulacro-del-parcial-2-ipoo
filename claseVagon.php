@@ -54,5 +54,5 @@
     }
 
     //Metodo que se redefine en las clases hijas
-    abstract public function calcularPeso();
+    abstract public function calcularPesoVagon();
  }
