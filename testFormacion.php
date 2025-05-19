@@ -25,7 +25,7 @@ $objFormacion->incorporarVagonFormacion($objVagon3);
 
 // 4. Intentar incorporar 6 pasajeros
 $resultado1 = $objFormacion->incorporarPasajeroFormacion(6);
-echo "Resultado incorporar 6 pasajeros: " . ($resultado1 ? "✅ OK\n" : "❌ No se pudo\n");
+echo "Resultado incorporar 6 pasajeros: " . ($resultado1 ? "Si se pudo\n" : "No se pudo\n");
 
 // 5. Print de los vagones
 echo "\n--- Estado de los vagones ---\n";
@@ -35,7 +35,7 @@ echo $objVagon3->__toString();
 
 // 6. Intentar incorporar 14 pasajeros
 $resultado2 = $objFormacion->incorporarPasajeroFormacion(14);
-echo "\nResultado incorporar 14 pasajeros: " . ($resultado2 ? "✅ OK\n" : "❌ No se pudo\n");
+echo "\nResultado incorporar 14 pasajeros: " . ($resultado2 ? "Si se pudo\n" : "No se pudo\n");
 
 // 7. Print locomotora
 echo "\n--- Locomotora ---\n";
